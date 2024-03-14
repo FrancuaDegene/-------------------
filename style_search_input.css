@@ -1,0 +1,111 @@
+body {
+  font-size: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+  width: 80%; /* Примерная ширина контейнера */
+  max-width: 450px;
+  margin: 0 auto; /* Центрирование контейнера */
+  position: relative; /* Настройка позиционирования */
+
+}
+
+.search-box {
+  display: flex; /* Использование flexbox для выравнивания элемен тов */
+  align-items: center; /* Выравнивание элементов по вертикали */
+  border: 1px solid #ccc; /* Пример рамки */
+  padding: 10px; /* Отступы внутри блока */
+  
+}
+
+.search-input {
+  flex-grow: 1; /* Элемент занимает все доступное пространство */
+  margin-right: 10px; /* Отступ справа */
+  
+}
+
+.search-input__field {
+  width: 100%; /* Заполнение всей доступной ширины */
+  border-radius: 6px;
+  padding: 5px; /* Отступы внутри поля ввода */
+  height: 30px;
+  overflow: hidden; /* Скрытие текста, выходящего за пределы области ввода */
+}
+
+.search-button {
+  padding: 8px 10px; /* Задание отступов для кнопки */
+  background-color: #7fda46; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста кнопки */
+  border: none; /* Убираем границу у кнопки */
+  cursor: pointer; /* Меняем курсор при наведении на кнопку */
+  position: absolute; /* Абсолютное позиционирование */
+  right: 20px; /* Отступ справа от правого края */
+  top: 50%; /* Положение сверху по вертикали */
+  transform: translateY(-50%); /* Сдвигаем кнопку на половину своей высоты вверх, чтобы центрировать ее по вертикали */
+  border-radius: 6px;
+}
+
+.clear-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #888;
+    padding: 0;
+    display: none;
+    position: absolute; /* Позиционируем кнопку абсолютно */
+    right: 85px; /* Отступ справа от родительского элемента */
+    top: 50%; /* Положение сверху */
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    z-index: 1; /* Поднимаем кнопку выше остальных элементов */
+}
+
+.clear-button:hover {
+  color: #0c0c0c;
+}
+
+.company-info-container {
+  width: 60%; /* Ширина контейнера (можете изменить значение по своему усмотрению) */
+  max-width: 400px; /* Максимальная ширина контейнера */
+  /*border: 2px solid black;*/
+  box-shadow: 1px 1px 1px 1px #888;
+  border-radius: 6px;
+  background-color: rgb(240, 240, 211);
+  margin-left: 35%; /* Центрирование контейнера по горизонтали */
+  height: auto; /* Высота контейнера будет автоматически подстраиваться под его содержимое */
+  margin-top: 3%;
+  overflow: auto; /* Добавляем прокрутку при необходимости */
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+
+.company-info h2 {
+  margin-bottom: 1%; /* Уменьшаем расстояние снизу у заголовков h2 */
+  line-height: 15px;
+}
+
+.company-info p {
+  margin-top: 1%; /* Уменьшаем расстояние сверху у параграфов p */
+  font-weight: bold;
+}
+
+
+
+.company-description {
+  /*border: 1px solid #0c0c0c;*/
+  border-radius:10px;
+  padding: 2%;
+  box-shadow: 2px 1px 1px 1px #888;
+}
+
+.info-block h2,
+.info-block p {
+  display: inline-block;
+  margin: 1%; /* Удаляем внешние отступы */
+}
+
+ p {
+  font-weight: bold;
+}
