@@ -1,6 +1,7 @@
 body {
   font-size: 15px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #d3cbcb;
 }
 
 .container {
@@ -65,47 +66,62 @@ body {
   color: #0c0c0c;
 }
 
-.company-info-container {
-  width: 60%; /* Ширина контейнера (можете изменить значение по своему усмотрению) */
-  max-width: 400px; /* Максимальная ширина контейнера */
-  /*border: 2px solid black;*/
-  box-shadow: 1px 1px 1px 1px #888;
-  border-radius: 6px;
-  background-color: rgb(240, 240, 211);
-  margin-left: 35%; /* Центрирование контейнера по горизонтали */
-  height: auto; /* Высота контейнера будет автоматически подстраиваться под его содержимое */
-  margin-top: 3%;
-  overflow: auto; /* Добавляем прокрутку при необходимости */
-  padding-left: 1%;
-  padding-right: 1%;
+/*стили для блока описания компании*/
+
+.container-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2% auto;
+  max-width: 21%;
+  width: 100%;
 }
 
+/*.company-info img {
+  width: 15%;
+  height: auto;
+}*/
 
-.company-info h2 {
-  margin-bottom: 1%; /* Уменьшаем расстояние снизу у заголовков h2 */
-  line-height: 15px;
+.container-info .hidden-description {
+  display: none; /* Скрытое описание по умолчанию */
 }
 
-.company-info p {
-  margin-top: 1%; /* Уменьшаем расстояние сверху у параграфов p */
-  font-weight: bold;
+.container-info h1 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin: 0; /* Убираем отступы сверху и снизу для заголовка */
 }
 
-
-
-.company-description {
-  /*border: 1px solid #0c0c0c;*/
-  border-radius:10px;
-  padding: 2%;
-  box-shadow: 2px 1px 1px 1px #888;
+.info-block {
+  display: flex;
+  justify-content: space-between; /* Равномерно распределяет пространство между детьми */
 }
 
-.info-block h2,
+.info-block h2 {
+  font-size: 16px;
+  color: #555;
+  margin: 0; /* Убираем отступы для заголовков */
+}
+
 .info-block p {
-  display: inline-block;
-  margin: 1%; /* Удаляем внешние отступы */
+  font-size: 16px;
+  color: #555;
+  margin: 0; /* Убираем отступы для абзацев */
 }
 
- p {
-  font-weight: bold;
+/* Пример анимации для появления блока */
+.container-info {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
