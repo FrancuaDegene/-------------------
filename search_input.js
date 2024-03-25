@@ -96,13 +96,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   showMoreButton.addEventListener('click', function() {
-    hiddenDescription.style.display = 'block';
+    hiddenDescription.classList.add('show');
     showMoreButton.style.display = 'none';
     hideMoreButton.style.display = 'inline-block';
   });
 
   hideMoreButton.addEventListener('click', function() {
-    hiddenDescription.style.display = 'none';
+    hiddenDescription.classList.remove('show');
     showMoreButton.style.display = 'inline-block';
     hideMoreButton.style.display = 'none';
   });
