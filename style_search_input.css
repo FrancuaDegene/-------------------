@@ -74,47 +74,45 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 2% auto;
-  max-width: 21%;
+  max-width: 20%;
   width: 100%;
+  overflow: hidden;
 }
 
-/*.company-info img {
-  width: 15%;
-  height: auto;
-}*/
-
 .container-info .hidden-description {
-  display: none; /* Скрытое описание по умолчанию */
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.container-info .hidden-description.show {
+  visibility: visible;
+  max-height: initial;
 }
 
 .container-info h1 {
   font-size: 24px;
   color: #333;
   text-align: center;
-  margin: 0; /* Убираем отступы сверху и снизу для заголовка */
+  margin: 0;
 }
 
 .info-block {
   display: flex;
-  justify-content: space-between; /* Равномерно распределяет пространство между детьми */
+  flex-direction: column; /* Вертикальное расположение */
 }
 
 .info-block h2 {
   font-size: 16px;
   color: #555;
-  margin: 0; /* Убираем отступы для заголовков */
+  margin: 0;
 }
 
 .info-block p {
   font-size: 16px;
-  color: #555;
-  margin: 0; /* Убираем отступы для абзацев */
-}
-
-/* Пример анимации для появления блока */
-.container-info {
-  animation-name: fadeIn;
-  animation-duration: 1s;
+  color: #754545;
+  margin: 0;
 }
 
 @keyframes fadeIn {
@@ -124,4 +122,15 @@ body {
   to {
     opacity: 1;
   }
+}
+/* стиль к кнопке показать полностью*/
+.show-more-button, .hide-more-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 6px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px; /* Пример */
+  line-height: 1; /* Пример */
 }
