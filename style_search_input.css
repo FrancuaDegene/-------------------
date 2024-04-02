@@ -1,7 +1,8 @@
 body {
   font-size: 15px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #d3cbcb;
+  background-color: #3e3e3e;
+
 }
 
 .container {
@@ -15,7 +16,7 @@ body {
 .search-box {
   display: flex; /* Использование flexbox для выравнивания элемен тов */
   align-items: center; /* Выравнивание элементов по вертикали */
-  border: 1px solid #ccc; /* Пример рамки */
+ 
   padding: 10px; /* Отступы внутри блока */
   
 }
@@ -28,11 +29,16 @@ body {
 
 .search-input__field {
   width: 100%; /* Заполнение всей доступной ширины */
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 5px; /* Отступы внутри поля ввода */
   height: 30px;
   overflow: hidden; /* Скрытие текста, выходящего за пределы области ввода */
+  border: none; /* Убираем обводку */
 }
+.search-input__field::placeholder {
+  color: #000000; /* Новый цвет текста для placeholder */
+}
+
 
 .search-button {
   padding: 8px 10px; /* Задание отступов для кнопки */
@@ -68,66 +74,76 @@ body {
 
 /*стили для блока описания компании*/
 
+/* Стили для контейнера информации о компании */
 .container-info {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+              0px 2px 2px #333; /* Добавляем тень */
   margin: 2% auto;
   max-width: 20%;
   width: 100%;
   overflow: hidden;
 }
 
+/* Стили для скрытого описания */
 .container-info .hidden-description {
   visibility: hidden;
   max-height: 0;
   overflow: hidden;
   margin-top: 10px;
+  margin-bottom: 3%; /* Отступ от предыдущего блока */
+  color: #333;
 }
 
+/* Показать скрытое описание */
 .container-info .hidden-description.show {
   visibility: visible;
   max-height: initial;
-}
+  animation: fadeIn 0.5s cubic-bezier(0.42, 0, 0.58, 1); /* Применяем анимацию fadeIn с кастомизированной функцией распределения */}
 
+/* Стили для заголовка */
 .container-info h1 {
-  font-size: 24px;
-  color: #333;
+  font-size: 35px;
   text-align: center;
   margin: 0;
 }
 
+
+/* Стили для блока информации */
 .info-block {
   display: flex;
   flex-direction: column; /* Вертикальное расположение */
-  
 }
 
+/* Стили для логотипа */
 .info-block img {
   width: 25%; /* Задайте нужную ширину для логотипа */
   height: auto; /* Автоматическое вычисление высоты для сохранения пропорций */
   margin-left: 35%; /* Отступ справа от логотипа */
   margin-top: 10px;
+  border: 4px solid #333;
+  border-radius: 20%;
 }
 
-.info-block h2 {
-  font-size: 16px;
-  color: #555;
-  margin: 0;
+/* Стили для заголовков */
+.info-block h1, .info-block h2 {
+  font-size: 20px;
+  margin: 5px;
+  color: #131313; /* Цвет заголовков */
 }
 
-.info-block h1 {
-  font-size: 24px;
-  color: #333;
-  margin: 0;
-}
+
+
+/* Стили для описания */
 .info-block p {
-  font-size: 16px;
-  color: #754545;
-  margin: 0;
+  font-size: 18px;
+  margin: 2px;
+  color: #222222; /* Цвет описания */
 }
 
+/* Анимация появления */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -136,7 +152,8 @@ body {
     opacity: 1;
   }
 }
-/* стиль к кнопке показать полностью*/
+
+/* Стили для кнопок "Показать полностью" и "Скрыть" */
 .show-more-button, .hide-more-button {
   background-color: #586574;
   color: #ddd8d8;
@@ -147,4 +164,41 @@ body {
   font-size: 13px; /* Пример */
   line-height: 1; /* Пример */
 }
+
+/* Отступ для скрытого описания */
+.hidden-description {
+margin-bottom: 3%;
+}
+.container-info .hidden-description {
+  color: #0c0c0c;
+  font-size: 18px;
+}
+
+/* Стили для скрытия длинного описания */
+.company-description .hidden-description {
+  word-wrap: break-word; /* Перенос слов */
+  
+}
+
+.container-info .company-info h1,
+.key-metrics h1 {
+  font-size: 25px; /* Размер шрифта, который вы хотите установить */
+}
+
+.company-info .company-isin,
+.company-info .company-shares-outstanding {
+  margin-bottom: 15px; /* Отступ снизу */
+
+}
+
+.container-info .company-info .price-info-container h1 {
+  margin-bottom: 15px;
+}
+/* вижджет трейдингвью*/ 
+.tradingview-widget-container {
+  display: none;
+  margin: 0 auto; /* Это центрирует контейнер по горизонтали */
+  border-radius: 10px;
+}
+
 

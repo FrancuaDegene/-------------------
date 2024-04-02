@@ -11,27 +11,27 @@
   <div class="container">
     <div class="search-box">
         <div class="search-input">
-          <input type="text" class="search-input__field" placeholder="Введите название компании или тикер">
+        <input type="text" class="search-input__field" placeholder="Введите название компании или тикер">
         <button class="search-button">Найти</button>
         <button class="clear-button">&#10006;</button> <!-- Кнопка с крестиком для сброса -->
         </div>
       </div>
     </div>
-   
-    <!--Первый блок с инфомацией по компании-->
+  
+    <!--Первый блок описание  компании-->
     <div class="container-info">
       <div class="company-info">
         <div class="info-block">
-       <img src="/logo-sber.png" alt="Логотип Сбербанка">
+        <img src="/logo-sber.png" alt="Логотип Сбербанка">
           <h1>Описание компании</h1>
-          <p class="company-description">
+          <div class="company-description">
             «Сберба́нк» (полное наименование — Публи́чное акционе́рное о́бщество «Сбербанк Росси́и»[5], зарегистрированная торговая марка «Сбер») — российский финансовый конгломерат, крупнейший универсальный банк России и Восточной Европы.
             <button class="show-more-button">Показать полностью</button>
             <button class="hide-more-button" style="display: none;">Скрыть</button>
-            <div class="hidden-description">
+            <div class="hidden-description ">
               По итогам 2023 года у Сбербанка 108,5 млн активных частных клиентов и 3,2 млн активных корпоративных клиентов[6][7]. Среди крупнейших банков мира по размеру активов находится в шестом десятке, по версии S&P Global (данные на конец 2022 года)[8]. Включён Банком России в перечень системно значимых кредитных организаций[9]..
             </div>
-          </p>
+          </div>
         </div>
         <div class="info-block">
           <h2>Тикер:</h2>
@@ -47,7 +47,7 @@
         </div>
         <div class="info-block">
           <h2>Главный офис:</h2>
-          <p class="company-headquarters">Нью-Йорк, США</p>
+          <p class="company-headquarters">Россия, Волгоград</p>
         </div>
         <div class="info-block">
           <h2>Количество сотрудников:</h2>
@@ -60,16 +60,68 @@
         <div class="info-block">
           <h2>Код ISIN:</h2>
           <p class="company-isin">US1234567890</p>
-        </div>
+        </div> 
+    <!-- второй блок ключевые показатели -->
+    <div class="key-metrics">
+      <div class="info-block">
+        <h1>Основные показатели</h1>
+      </div>
+      <div class="info-block">
+        <h2>Рыночная капитализация:</h2>
+        <p class="company-market-cap">$100 млрд</p>
+      </div>
+      <div class="info-block">
+        <h2>Чистая прибыль:</h2>
+        <p class="company-net-income">$10 млрд</p>
+      </div>
+      <div class="info-block">
+        <h2>Дивидендная доходность:</h2>
+        <p class="company-dividend-yield">5%</p>
+      </div>
+      <div class="info-block">
+        <h2>Выручка:</h2>
+        <p class="company-revenue">$50 млрд</p>
+      </div>
+      <div class="info-block">
+        <h2>Акции в обращении:</h2>
+        <p class="company-shares-outstanding">10 млн</p>
       </div>
     </div>
     
-
-       
-    
-    
-    <script src="search_input.js"></script>
-
+ <!-- Блок информация о котировках-->
+<div class="price-info-container">
+  <h1>Информация о котировках</h1>
+  <div class="price-info">
+    <div class="info-block">
+      <h2>Цена открытия:</h2>
+      <p class="company-opening-price">$100</p>
+    </div>
+    <div class="info-block">
+      <h2>Минимальная цена:</h2>
+      <p class="company-min-price">$95</p>
+    </div>
+    <div class="info-block">
+      <h2>Максимальная цена:</h2>
+      <p class="company-max-price">$110</p>
+    </div>
+    <div class="info-block">
+      <h2>Цена закрытия:</h2>
+      <p class="company-closing-price">$105</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="black-text">Track all markets on TradingView</span></a></div>
+  <script  src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async> </script>
+</div>
+<!-- TradingView Widget END -->
+<script src="search_input.js"></script>
+<script src="tradingview-widget-setup.js"></script>
 </body>
   
 </html>
+
